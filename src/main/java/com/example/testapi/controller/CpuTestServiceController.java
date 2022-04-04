@@ -17,7 +17,8 @@ public class CpuTestServiceController {
 
     @GetMapping(value = "/load")
     @ResponseBody
-    public String load() throws InterruptedException {
+    public String load() throws Exception {
+        //throw new Exception();
         return cpuTestService.load(ThreadLocalRandom.current().nextLong(5));
     }
 }
